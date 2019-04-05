@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mvc.employee.view.EmployeeController">
+   <children>
+      <SplitPane dividerPositions="0.5551378446115288" layoutX="14.0" layoutY="14.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="employeeTable" layoutX="-204.0" layoutY="89.0" prefHeight="598.0" prefWidth="438.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                        <TableColumn fx:id="employeeIdColumn" prefWidth="75.0" text="Id Prac." />
+                      <TableColumn fx:id="firstNameColumn" prefWidth="75.0" text="Imię" />
+                      <TableColumn fx:id="lastNameColumn" prefWidth="87.0" text="Nazwisko" />
+                        <TableColumn fx:id="emailColumn" prefWidth="75.0" text="E-mail" />
+                        <TableColumn fx:id="phoneNameColumn" prefWidth="75.0" text="Telefon" />
+                        <TableColumn fx:id="hireDateColumn" prefWidth="75.0" text="Data zatrudnienia" />
+                        <TableColumn fx:id="jobTitleColumn" prefWidth="75.0" text="Stanowisko" />
+                        <TableColumn fx:id="salaryColumn" prefWidth="75.0" text="Wynagrodzenie" />
+                        <TableColumn fx:id="managerNameColumn" prefWidth="75.0" text="Przełożony" />
+                        <TableColumn fx:id="departmentNameColumn" prefWidth="75.0" text="Nazwa działu" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <effect>
+                        <SepiaTone />
+                     </effect>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="436.0" prefWidth="472.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="6.0" text="Pracownik" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <GridPane layoutX="14.0" layoutY="30.0" prefHeight="309.0" prefWidth="396.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="30.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Id Pracownika" />
+                        <Label fx:id="employeeIdLabel" text="EmployeeId" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label text="Imię" GridPane.rowIndex="1" />
+                        <Label fx:id="firstNameLabel" text="FirstName" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label text="Nazwisko" GridPane.rowIndex="2" />
+                        <Label fx:id="lastNameLabel" text="LastName" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label text="E-mail" GridPane.rowIndex="3" />
+                        <Label fx:id="emailLabel" text="Email" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label text="Telefon" GridPane.rowIndex="4" />
+                        <Label fx:id="phoneNumberLabel" text="Phone" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label text="Data zatrudnienia" GridPane.rowIndex="5" />
+                        <Label fx:id="hireDateLabel" text="HireDate" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label text="Stanowisko" GridPane.rowIndex="6" />
+                        <Label fx:id="jobTitleLabel" text="JobTitle" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label text="Wynagrodzenie" GridPane.rowIndex="7" />
+                        <Label fx:id="salaryLabel" text="Salary" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label text="Przełożony" GridPane.rowIndex="8" />
+                        <Label fx:id="managerNameLabel" text="ManagerName" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label text="Nazwa działu" GridPane.rowIndex="9" />
+                        <Label fx:id="departmentNameLabel" text="DepartmentName" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                     </children>
+                  </GridPane>
+                  <ToolBar layoutX="194.0" layoutY="344.0" prefHeight="50.0" prefWidth="190.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                    <items>
+                      <Button mnemonicParsing="false" onAction="#insertEmployee" text="Wstaw" textFill="#070707">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font></Button>
+                        <Button mnemonicParsing="false" onAction="#editEmployee" text="Edytuj">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font></Button>
+                        <Button mnemonicParsing="false" onAction="#deleteEmployee" text="Usuń" underline="true">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font></Button>
+                    </items>
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </ToolBar>
+               </children>
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
